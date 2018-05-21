@@ -17,8 +17,8 @@ class Overview extends Component {
     this.changeActiveList = this.changeActiveList.bind(this);
   }
 
-  changeActiveList(id, e) {
-    this.setState({ activeList: id });
+  changeActiveList(e) {
+    this.setState({ activeList: Number(e.target.dataset.list) });
   }
 
   render() {

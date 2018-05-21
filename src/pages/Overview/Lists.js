@@ -23,6 +23,7 @@ const styles = theme => ({
     transition: "background-color .5s",
     padding: theme.spacing.unit * 2,
     paddingLeft: theme.spacing.unit * 3,
+    willChange: "background-color",
     "&.active": {
       backgroundColor: theme.palette.primary.main
     },
@@ -55,7 +56,7 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           พืชทุกต้น เริ่มจาก...
         </Typography>
-        <Title onClick={e => props.changeActiveList(0, e)}>Embryo</Title>
+        <Title onClick={props.changeActiveList} data-list="0">Embryo</Title>
         <Image src={embryoImg} alt="Embryo" />
       </li>
       <li
@@ -66,7 +67,7 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           Embryo พัฒนาต่อเป็น...
         </Typography>
-        <Title onClick={e => props.changeActiveList(1, e)}>Promeristem</Title>
+        <Title onClick={props.changeActiveList} data-list="1">Promeristem</Title>
         <Image src={promeristemImg} alt="Promeristem" />
       </li>
       <li
@@ -77,7 +78,7 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           Promeristem พัฒนาต่อเป็น...
         </Typography>
-        <Title onClick={e => props.changeActiveList(2, e)}>
+        <Title onClick={props.changeActiveList} data-list="2">
           Primary meristem
         </Title>
         <Chips
@@ -85,9 +86,9 @@ function Lists(props) {
           first="Protoderm"
           second="Ground meristem"
           third="Procambium"
-          firstClick={e => props.changeActiveList(0, e)}
-          secondClick={e => props.changeActiveList(1, e)}
-          thirdClick={e => props.changeActiveList(2, e)}
+          firstClick={props.changeActiveList}
+          secondClick={props.changeActiveList}
+          thirdClick={props.changeActiveList}
         />
         <Image src={primaryMeristemImg} alt="Primary meristem" />
       </li>
@@ -99,7 +100,7 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           Primary meristem พัฒนาต่อเป็น...
         </Typography>
-        <Title onClick={e => props.changeActiveList(3, e)}>
+        <Title onClick={props.changeActiveList} data-list="3">
           Permanent tissue
         </Title>
         <Chips
@@ -107,9 +108,9 @@ function Lists(props) {
           first="Epidermis"
           second="Cortex"
           third="Stele"
-          firstClick={e => props.changeActiveList(0, e)}
-          secondClick={e => props.changeActiveList(0, e)}
-          thirdClick={e => props.changeActiveList(0, e)}
+          firstClick={props.changeActiveList}
+          secondClick={props.changeActiveList}
+          thirdClick={props.changeActiveList}
         />
         <Image src={permanentTissueImg} alt="Permanent tissue" />
       </li>

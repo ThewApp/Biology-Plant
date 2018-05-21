@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
@@ -23,20 +23,28 @@ const styles = theme => ({
       willChange: "opacity",
       ".active &": {
         height: "inherit"
-      },
+      }
     },
     [theme.breakpoints.up("md")]: {
       maxWidth: "480px"
     },
     [theme.breakpoints.up("lg")]: {
       maxWidth: "600px",
-      right: "2vw",
+      right: "2vw"
     }
   }
 });
 
-function Image(props) {
-  return <img className={props.classes.root} src={props.src} alt={props.alt} />;
+class Image extends PureComponent {
+  render() {
+    return (
+      <img
+        className={this.props.classes.root}
+        src={this.props.src}
+        alt={this.props.alt}
+      />
+    );
+  }
 }
 
 export default withStyles(styles)(Image);

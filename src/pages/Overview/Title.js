@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
@@ -21,24 +21,27 @@ const styles = theme => ({
   focus: {
     outline: "orange auto 5px",
     ".active &": {
-        outline: "white auto 5px"
+      outline: "white auto 5px"
     }
   }
 });
 
-function Title(props) {
-  return (
-    <Typography variant="display1" className={props.classes.root}>
-      <ButtonBase
-        disableRipple
-        focusVisibleClassName={props.classes.focus}
-        className={props.classes.button}
-        onClick={props.onClick}
-      >
-        {props.children}
-      </ButtonBase>
-    </Typography>
-  );
+class Title extends PureComponent {
+  render() {
+    return (
+      <Typography variant="display1" className={this.props.classes.root}>
+        <ButtonBase
+          disableRipple
+          focusVisibleClassName={this.props.classes.focus}
+          className={this.props.classes.button}
+          onClick={this.props.onClick}
+          data-list={this.props["data-list"]}
+        >
+          {this.props.children}
+        </ButtonBase>
+      </Typography>
+    );
+  }
 }
 
 export default withStyles(styles)(Title);
