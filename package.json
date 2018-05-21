@@ -2,6 +2,7 @@
   "name": "plant",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ThewApp.github.io/Biology-Plant",
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0",
