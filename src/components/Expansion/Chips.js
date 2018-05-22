@@ -36,6 +36,7 @@ function Chips(props) {
           className={props.classes.chip}
           component={Link}
           to={`tissue/${name}`}
+          tabIndex="0"
         />
       ))}
     </div>
