@@ -10,7 +10,7 @@ const styles = theme => ({
       transform: "scaleY(1)"
     },
     "&.active $link": {
-      color: theme.palette.common.white,
+      color: theme.palette.common.white
     },
     "&.active.exact $link": {
       pointerEvents: "none"
@@ -32,7 +32,7 @@ const styles = theme => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.3rem",
-      lineHeight: `${theme.spacing.unit * 6}px`,
+      lineHeight: `${theme.spacing.unit * 6}px`
     }
   },
   indicator: {
@@ -50,7 +50,12 @@ const styles = theme => ({
 
 function NavItem(props) {
   const Item = route => (
-    <li className={props.classes.root + (route.match ? " active" + (route.match.isExact ? " exact" : "") : "")}>
+    <li
+      className={
+        props.classes.root +
+        (route.match ? " active" + (route.match.isExact ? " exact" : "") : "")
+      }
+    >
       <Link className={props.classes.link} to={props.to}>
         {props.text}
       </Link>
