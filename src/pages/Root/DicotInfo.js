@@ -55,7 +55,7 @@ function DicotInfo(props) {
       <Typography variant="subheading" className={props.classes.subheading}>
         ใบเลี้ยงคู่มี Secondary Growth
       </Typography>
-      <Button color="primary" component={Link} to="stem/secondary">
+      <Button color="primary" component={Link} to="root/secondary">
         Secondary Growth ของรากพืชใบเลี้ยงคู่
       </Button>
     </Paper>

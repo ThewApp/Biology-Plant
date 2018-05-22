@@ -20,13 +20,13 @@ function DicotExpansion(props) {
       />
       <Expansion
         title="Cortex"
-        details="ชั้นที่อยู่นอกสุด"
+        details="ชั้นที่อยู่ตรงกลาง"
         detailsImg={epidermisImg}
         included={["Parenchyma"]}
       />
       <Expansion
         title="Stele"
-        details="ชั้นที่อยู่นอกสุด"
+        details="ชั้นที่อยู่ในสุด"
         detailsImg={epidermisImg}
         included={["Vascular"]}
       />
