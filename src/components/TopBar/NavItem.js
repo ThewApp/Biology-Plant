@@ -11,6 +11,8 @@ const styles = theme => ({
     },
     "&.active $link": {
       color: theme.palette.common.white,
+    },
+    "&.active.exact $link": {
       pointerEvents: "none"
     }
   },
@@ -48,7 +50,7 @@ const styles = theme => ({
 
 function NavItem(props) {
   const Item = route => (
-    <li className={props.classes.root + (route.match ? " active" : "")}>
+    <li className={props.classes.root + (route.match ? " active" + (route.match.isExact ? " exact" : "") : "")}>
       <Link className={props.classes.link} to={props.to}>
         {props.text}
       </Link>
