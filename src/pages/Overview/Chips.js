@@ -50,13 +50,15 @@ class Chips extends PureComponent {
           onClick={this.props.secondClick}
           data-list="1"
         />
-        <Chip
-          label={this.props.third}
-          className={this.props.classes.chip}
-          classes={{ label: this.props.classes.stele }}
-          onClick={this.props.thirdClick}
-          data-list="1"
-        />
+        {this.props.third && (
+          <Chip
+            label={this.props.third}
+            className={this.props.classes.chip}
+            classes={{ label: this.props.classes.stele }}
+            onClick={this.props.thirdClick}
+            data-list="1"
+          />
+        )}
       </div>
     );
   }

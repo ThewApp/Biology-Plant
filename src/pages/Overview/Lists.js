@@ -21,7 +21,7 @@ const styles = theme => ({
   },
   listItem: {
     transition: "background-color .5s",
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit,
     paddingLeft: theme.spacing.unit * 3,
     willChange: "background-color",
     "&.active": {
@@ -123,6 +123,26 @@ function Lists(props) {
           firstClick={props.changeActiveList}
           secondClick={props.changeActiveList}
           thirdClick={props.changeActiveList}
+        />
+        <Image src={permanentTissueImg} alt="Permanent tissue" />
+      </li>
+      <li
+        className={
+          props.classes.listItem + (props.activeList === 4 ? " active" : "")
+        }
+      >
+        <Typography variant="headline" className={props.classes.hide}>
+          พืชบางชนิด อาจมี...
+        </Typography>
+        <Title onClick={props.changeActiveList} data-list="4">
+          Secondary meristem
+        </Title>
+        <Chips
+          hideClass={props.classes.hide}
+          first="Cork cambium"
+          second="Vascular cambium"
+          firstClick={props.changeActiveList}
+          secondClick={props.changeActiveList}
         />
         <Image src={permanentTissueImg} alt="Permanent tissue" />
       </li>

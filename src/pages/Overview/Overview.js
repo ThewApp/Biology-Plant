@@ -4,7 +4,7 @@ import Lists from "./Lists";
 
 const styles = theme => ({
   root: {
-    paddingTop: theme.spacing.unit * 5,
+    paddingTop: theme.spacing.unit * 2
   }
 });
 
