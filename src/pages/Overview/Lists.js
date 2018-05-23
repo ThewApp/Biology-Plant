@@ -28,20 +28,28 @@ const styles = theme => ({
       backgroundColor: theme.palette.primary.main
     },
     "&.active $hide": {
-      height: theme.typography.display1.lineHeight,
-      opacity: 1,
-      transform: "translateX(0)",
-      pointerEvents: "auto"
+      color: theme.palette.common.white,
+      [theme.breakpoints.up("sm")]: {
+        height: theme.typography.display1.lineHeight,
+        opacity: 1,
+        transform: "translateX(0)",
+        pointerEvents: "auto"
+      }
     }
   },
   hide: {
-    height: 0,
-    opacity: 0,
-    transform: "translateX(-20px)",
-    willChange: ["height", "opacity", "transform"],
-    transition: ["height .5s", "opacity .5s", "transform .5s"],
-    color: theme.palette.common.white,
-    pointerEvents: "none"
+    [theme.breakpoints.only("xs")]: {
+      color: theme.typography.display1.color
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: 0,
+      opacity: 0,
+      transform: "translateX(-20px)",
+      willChange: ["height", "opacity", "transform"],
+      transition: ["height .5s", "opacity .5s", "transform .5s"],
+      color: theme.palette.common.white,
+      pointerEvents: "none"
+    }
   }
 });
 
@@ -56,7 +64,9 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           พืชทุกต้น เริ่มจาก...
         </Typography>
-        <Title onClick={props.changeActiveList} data-list="0">Embryo</Title>
+        <Title onClick={props.changeActiveList} data-list="0">
+          Embryo
+        </Title>
         <Image src={embryoImg} alt="Embryo" />
       </li>
       <li
@@ -67,7 +77,9 @@ function Lists(props) {
         <Typography variant="headline" className={props.classes.hide}>
           Embryo พัฒนาต่อเป็น...
         </Typography>
-        <Title onClick={props.changeActiveList} data-list="1">Promeristem</Title>
+        <Title onClick={props.changeActiveList} data-list="1">
+          Promeristem
+        </Title>
         <Image src={promeristemImg} alt="Promeristem" />
       </li>
       <li

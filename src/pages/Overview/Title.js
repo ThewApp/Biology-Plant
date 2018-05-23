@@ -8,6 +8,9 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
     marginLeft: theme.spacing.unit * 5,
+    [theme.breakpoints.only("xs")]: {
+      color: theme.typography.headline.color
+    },
     ".active &": {
       color: theme.palette.common.white
     }
