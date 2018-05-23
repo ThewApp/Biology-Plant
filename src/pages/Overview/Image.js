@@ -16,7 +16,7 @@ const styles = theme => ({
     willChange: ["opacity", "height"],
     [theme.breakpoints.up("sm")]: {
       position: "absolute",
-      top: theme.spacing.unit * 5,
+      top: theme.spacing.unit * 2,
       right: 0,
       maxWidth: "300px",
       transition: "opacity .5s",
