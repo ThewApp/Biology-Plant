@@ -8,7 +8,7 @@ const styles = theme => ({
     height: 0,
     margin: "0 auto",
     opacity: 0,
-    ".active &": {
+    ".active &.activeImg": {
       opacity: 1,
       height: "300px"
     },
@@ -21,8 +21,8 @@ const styles = theme => ({
       maxWidth: "300px",
       transition: "opacity .5s",
       willChange: "opacity",
-      ".active &": {
-        height: "inherit"
+      ".active &.activeImg": {
+        height: "inherit",
       }
     },
     [theme.breakpoints.up("md")]: {
@@ -39,7 +39,9 @@ class Image extends PureComponent {
   render() {
     return (
       <img
-        className={this.props.classes.root}
+        className={
+          this.props.classes.root + (this.props.active ? " activeImg" : "")
+        }
         src={this.props.src}
         alt={this.props.alt}
       />

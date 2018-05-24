@@ -67,7 +67,7 @@ function Lists(props) {
         <Title onClick={props.changeActiveList} data-list="0">
           Embryo
         </Title>
-        <Image src={embryoImg} alt="Embryo" />
+        <Image src={embryoImg} alt="Embryo" active={!props.image} />
       </li>
       <li
         className={
@@ -80,7 +80,7 @@ function Lists(props) {
         <Title onClick={props.changeActiveList} data-list="1">
           Promeristem
         </Title>
-        <Image src={promeristemImg} alt="Promeristem" />
+        <Image src={promeristemImg} alt="Promeristem" active={!props.image} />
       </li>
       <li
         className={
@@ -98,11 +98,33 @@ function Lists(props) {
           first="Protoderm"
           second="Ground meristem"
           third="Procambium"
-          firstClick={props.changeActiveList}
-          secondClick={props.changeActiveList}
-          thirdClick={props.changeActiveList}
+          list="2"
+          onClick={props.setImage}
+          firstImage="protoderm"
+          secondImage="ground-meristem"
+          thirdImage="procambium"
+          image={props.image}
         />
-        <Image src={primaryMeristemImg} alt="Primary meristem" />
+        <Image
+          src={primaryMeristemImg}
+          alt="Primary meristem"
+          active={!props.image}
+        />
+        <Image
+          src={primaryMeristemImg}
+          alt="protoderm พัฒนาต่อเป็น epidermis"
+          active={props.image === "protoderm"}
+        />
+        <Image
+          src={primaryMeristemImg}
+          alt="ground meristem พัฒนาต่อเป็น cortex"
+          active={props.image === "ground-meristem"}
+        />
+        <Image
+          src={primaryMeristemImg}
+          alt="procambium พัฒนาต่อเป็น stele"
+          active={props.image === "procambium"}
+        />
       </li>
       <li
         className={
@@ -120,11 +142,15 @@ function Lists(props) {
           first="Epidermis"
           second="Cortex"
           third="Stele"
-          firstClick={props.changeActiveList}
-          secondClick={props.changeActiveList}
-          thirdClick={props.changeActiveList}
+          firstTo="tissue/epidermis"
+          secondTo="tissue/cortex"
+          thirdTo="tissue/stele"
         />
-        <Image src={permanentTissueImg} alt="Permanent tissue" />
+        <Image
+          src={permanentTissueImg}
+          alt="Permanent tissue"
+          active={!props.image}
+        />
       </li>
       <li
         className={
@@ -141,10 +167,27 @@ function Lists(props) {
           hideClass={props.classes.hide}
           first="Cork cambium"
           second="Vascular cambium"
-          firstClick={props.changeActiveList}
-          secondClick={props.changeActiveList}
+          list="4"
+          onClick={props.setImage}
+          firstImage="cork-cambium"
+          secondImage="vascular-cambium"
+          image={props.image}
         />
-        <Image src={permanentTissueImg} alt="Permanent tissue" />
+        <Image
+          src={permanentTissueImg}
+          alt="Permanent tissue"
+          active={!props.image}
+        />
+        <Image
+          src={embryoImg}
+          alt="cork cambium พัฒนาต่อเป็น cork และ phelloderm"
+          active={props.image === "cork-cambium"}
+        />
+        <Image
+          src={permanentTissueImg}
+          alt="vascular cambium พัฒนาต่อเป็น secondary phloem และ secondary xylem"
+          active={props.image === "vascular-cambium"}
+        />
       </li>
     </ol>
   );
