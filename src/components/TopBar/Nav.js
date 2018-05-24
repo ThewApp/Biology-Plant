@@ -27,6 +27,7 @@ function Nav(props) {
         <NavItem to="/" text="ภาพรวม" exact />
         <NavItem to="/stem" text="ลำต้น" />
         <NavItem to="/root" text="ราก" />
+        <NavItem to="/leaf" text="ใบ" />
       </ul>
     </nav>
   );
