@@ -38,14 +38,12 @@ class Overview extends Component {
   render() {
     return (
       <div className={this.props.classes.root}>
-        <div className={this.props.classes.wrapper}>
           <Lists
             activeList={this.state.activeList}
             image={this.state.image}
             changeActiveList={this.changeActiveList}
             setImage={this.setImage}
           />
-        </div>
       </div>
     );
   }
