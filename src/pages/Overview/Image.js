@@ -8,7 +8,7 @@ const styles = theme => ({
     height: 0,
     margin: "0 auto",
     opacity: 0,
-    ".active &.activeImg": {
+    ".expand &.activeImg": {
       opacity: 1,
       height: "300px"
     },
@@ -21,7 +21,7 @@ const styles = theme => ({
       maxWidth: "300px",
       transition: "opacity .5s",
       willChange: "opacity",
-      ".active &.activeImg": {
+      ".expand &.activeImg": {
         height: "inherit",
       }
     },

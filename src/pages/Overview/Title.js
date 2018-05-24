@@ -11,7 +11,7 @@ const styles = theme => ({
     [theme.breakpoints.only("xs")]: {
       color: theme.typography.headline.color
     },
-    ".active &": {
+    ".expand &": {
       color: theme.palette.common.white
     }
   },
@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   focus: {
     outline: "orange auto 5px",
-    ".active &": {
+    ".expand &": {
       outline: "white auto 5px"
     }
   }
@@ -38,7 +38,7 @@ class Title extends PureComponent {
           focusVisibleClassName={this.props.classes.focus}
           className={this.props.classes.button}
           onClick={this.props.onClick}
-          data-list={this.props["data-list"]}
+          data-index={this.props.index}
         >
           {this.props.children}
         </ButtonBase>
