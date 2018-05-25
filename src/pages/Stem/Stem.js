@@ -7,13 +7,13 @@ import StemCompare from "./StemCompare";
 
 function Stem(props) {
   return (
-      <SectionRoute
-        match={props.match}
-        external={StemExternal}
-        internal={StemInternal}
-        modified={StemModified}
-        compare={StemCompare}
-      />
+    <SectionRoute
+      path={props.match.path}
+      external={StemExternal}
+      internal={StemInternal}
+      modified={StemModified}
+      compare={StemCompare}
+    />
   );
 }
 
