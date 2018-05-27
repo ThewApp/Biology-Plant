@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Card from "@material-ui/core/Card";
@@ -31,28 +31,30 @@ const styles = theme => ({
   }
 });
 
-function SectionSelectorCard(props) {
-  return (
-    <ButtonBase
-      component={Link}
-      to={props.to}
-      className={props.classes.root}
-      focusVisibleClassName={props.classes.focusVisible}
-    >
-      <Card className={props.classes.card}>
-        <CardMedia
-          className={props.classes.media}
-          image={props.image}
-          title={props.title}
-        />
-        <CardContent className={props.classes.content}>
-          <Typography gutterBottom variant="headline">
-            {props.title}
-          </Typography>
-        </CardContent>
-      </Card>
-    </ButtonBase>
-  );
+class SectionSelectorCard extends PureComponent {
+  render() {
+    return (
+      <ButtonBase
+        component={Link}
+        to={this.props.to}
+        className={this.props.classes.root}
+        focusVisibleClassName={this.props.classes.focusVisible}
+      >
+        <Card className={this.props.classes.card}>
+          <CardMedia
+            className={this.props.classes.media}
+            image={this.props.image}
+            title={this.props.title}
+          />
+          <CardContent className={this.props.classes.content}>
+            <Typography gutterBottom variant="headline">
+              {this.props.title}
+            </Typography>
+          </CardContent>
+        </Card>
+      </ButtonBase>
+    );
+  }
 }
 
 export default withStyles(styles)(SectionSelectorCard);

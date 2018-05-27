@@ -45,14 +45,15 @@ function SwitchTransition(props) {
   return (
     <Route
       render={route => (
-        <TransitionGroup className={props.classes.transitionGroup}>
+        <TransitionGroup className={props.classes.transitionGroup} appear>
           <CSSTransition
             key={route.location.pathname}
             classNames={props.classes.fade}
             timeout={100}
-            appear
           >
-            <Switcher location={route.location}>{props.children}</Switcher>
+            <div>
+              <Switcher location={route.location}>{props.children}</Switcher>
+            </div>
           </CSSTransition>
         </TransitionGroup>
       )}
