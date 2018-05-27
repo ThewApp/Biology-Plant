@@ -1,10 +1,12 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Route } from "react-router-dom";
+import Switcher from "./Switcher";
 
 const styles = theme => ({
   transitionGroup: {
-    position: "relative",
+    position: "relative"
   },
   fade: {
     "&-enter, &-appear": {
@@ -39,19 +41,23 @@ const styles = theme => ({
   }
 });
 
-function RootAppTransition(props) {
+function SwitchTransition(props) {
   return (
-    <TransitionGroup className={props.classes.transitionGroup}>
-      <CSSTransition
-        key={props.location.pathname}
-        classNames={props.classes.fade}
-        timeout={100}
-        appear
-      >
-        {props.children}
-      </CSSTransition>
-    </TransitionGroup>
+    <Route
+      render={route => (
+        <TransitionGroup className={props.classes.transitionGroup}>
+          <CSSTransition
+            key={route.location.pathname}
+            classNames={props.classes.fade}
+            timeout={100}
+            appear
+          >
+            <Switcher location={route.location}>{props.children}</Switcher>
+          </CSSTransition>
+        </TransitionGroup>
+      )}
+    />
   );
 }
 
-export default withStyles(styles)(RootAppTransition);
+export default withStyles(styles)(SwitchTransition);
