@@ -9,7 +9,8 @@ import permanentTissueImg from "../../images/permanent tissue.jpg";
 
 const styles = theme => ({
   root: {
-    paddingTop: theme.spacing.unit * 2
+    paddingTop: theme.spacing.unit * 2,
+    position: "relative"
   },
   list: {
     [theme.breakpoints.up("sm")]: {
