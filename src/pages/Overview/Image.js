@@ -46,11 +46,12 @@ const styles = theme => ({
   },
   progress: {
     [theme.breakpoints.only("xs")]: {
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
+      right: "50%"
     },
     position: "absolute",
     top: "100px",
-    left: "45%"
+    right: "20vw",
   }
 });
 
