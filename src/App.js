@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // import logo from './logo.svg';
 // import './App.css';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -23,13 +23,16 @@ const theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <HashRouter>
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
-          <TopBar />
-          <RootApp />
-        </MuiThemeProvider>
-      </HashRouter>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        <HashRouter>
+          <Fragment>
+            <TopBar />
+            <RootApp />
+          </Fragment>
+        </HashRouter>
+      </MuiThemeProvider>
+
       // <div className="App">
       //   <header className="App-header">
       //     <img src={logo} className="App-logo" alt="logo" />
