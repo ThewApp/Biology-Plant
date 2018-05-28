@@ -4,6 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import SectionSelectorCard from "./SectionSelectorCard";
 
 import embryoImg from "../../images/embryo.jpg";
+import stemExternalImg from "../../images/stem external.png";
+import stemInternalImg from "../../images/stem internal.jpg";
 
 const styles = theme => ({
   root: {
@@ -18,8 +20,8 @@ const partData = {
 
 const imageData = {
   stem: {
-    external: embryoImg,
-    internal: embryoImg,
+    external: stemExternalImg,
+    internal: stemInternalImg,
     modified: embryoImg,
     compare: embryoImg
   },
