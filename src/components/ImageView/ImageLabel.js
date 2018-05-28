@@ -46,6 +46,9 @@ const styles = theme => ({
     },
     [theme.breakpoints.up("md")]: {
       padding: theme.spacing.unit,
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: theme.spacing.unit * 1.5,
     }
   },
   link: {
@@ -58,7 +61,9 @@ const styles = theme => ({
     }
   },
   description: {
+    [theme.breakpoints.up("md")]: {
     marginTop: theme.spacing.unit / 2
+    }
   }
 });
 
@@ -82,7 +87,7 @@ function calculateVectorStyle(anchorPosition, paperPosition) {
   return {
     top: `${top}%`,
     left: `${left}%`,
-    width: `${width + 5}%`,
+    width: `${width}%`,
     transform
   };
 }
