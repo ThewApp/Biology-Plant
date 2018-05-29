@@ -6,6 +6,7 @@ import SectionSelectorCard from "./SectionSelectorCard";
 import embryoImg from "../../images/embryo.jpg";
 import stemExternalImg from "../../images/stem external.png";
 import stemInternalImg from "../../images/stem internal.jpg";
+import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg"
 
 const styles = theme => ({
   root: {
@@ -22,7 +23,7 @@ const imageData = {
   stem: {
     external: stemExternalImg,
     internal: stemInternalImg,
-    modified: embryoImg,
+    modified: stemModifiedCladophyll,
     compare: embryoImg
   },
   root: {
