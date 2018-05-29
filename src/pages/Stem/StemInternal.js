@@ -1,15 +1,7 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
 import ImageView from "../../components/ImageView";
 
 import stemInternalImg from "../../images/stem internal.jpg";
-
-const styles = theme => ({
-  root: {
-    position: "relative",
-    zIndex: 1
-  }
-});
 
 const StemExternalData = {
   image: {
@@ -99,4 +91,4 @@ function StemInternal(props) {
   return <ImageView data={StemExternalData} />;
 }
 
-export default withStyles(styles)(StemInternal);
+export default StemInternal;
