@@ -3,7 +3,7 @@ import ImageView from "../../components/ImageView";
 
 import stemInternalImg from "../../images/stem internal.jpg";
 
-const StemExternalData = {
+const stemExternalData = {
   image: {
     src: stemInternalImg,
     alt: "Internal stem view"
@@ -88,7 +88,7 @@ const StemExternalData = {
 };
 
 function StemInternal(props) {
-  return <ImageView data={StemExternalData} />;
+  return <ImageView data={stemExternalData} />;
 }
 
 export default StemInternal;
