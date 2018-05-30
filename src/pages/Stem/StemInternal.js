@@ -1,7 +1,7 @@
 import React from "react";
 import ImageView from "../../components/ImageView";
 
-import stemInternalImg from "../../images/stem internal.jpg";
+import stemInternalImg from "../../images/stemInternal.jpg";
 
 const stemExternalData = {
   image: {

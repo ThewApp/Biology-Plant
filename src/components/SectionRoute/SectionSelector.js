@@ -4,8 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import SectionSelectorCard from "./SectionSelectorCard";
 
 import embryoImg from "../../images/embryo.jpg";
-import stemExternalImg from "../../images/stem external.png";
-import stemInternalImg from "../../images/stem internal.jpg";
+import stemExternalImg from "../../images/stemExternal.png";
+import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg"
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg"
 
