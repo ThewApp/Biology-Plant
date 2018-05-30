@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 
 import Overview from "./Overview";
 import Stem from "./Stem";
+import Root from "./Root";
 
 function RootApp(props) {
   return (
@@ -11,6 +12,7 @@ function RootApp(props) {
       <SwitchTransition>
         <Route exact path="/" component={Overview} />
         <Route path="/stem" component={Stem} />
+        <Route path="/root" component={Root} />
         <Route render={() => <div>Not Found</div>} />
       </SwitchTransition>
     </main>
