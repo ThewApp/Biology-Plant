@@ -1,5 +1,9 @@
 #!/bin/bash
 
+export PUBLIC_URL=https://ThewApp.github.io/Biology-Plant
+
+npm run build
+
 cd build
 
 email=$(git config user.email)
