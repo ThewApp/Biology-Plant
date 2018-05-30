@@ -84,19 +84,16 @@ const data = [
     intro: "พืชบางชนิด อาจมี...",
     title: "Secondary meristem",
     image: embryoImg,
-    chips: [
+    links: [
       {
         label: "Cork cambium",
         color: "red",
-        image: embryoImg,
-        alt: "cork cambium พัฒนาต่อเป็น cork และ phelloderm"
+        to: "tissue/cork-cambium"
       },
       {
         label: "Vascular cambium",
         color: "purple",
-        image: embryoImg,
-        alt:
-          "vascular cambium พัฒนาต่อเป็น secondary phloem และ secondary xylem"
+        to: "tissue/vascular-cambium"
       }
     ]
   }
