@@ -26,7 +26,9 @@ function TopBar(props) {
   return (
     <AppBar position="static">
       <Toolbar className={props.classes.toolbar}>
-        <Typography variant="title" className={props.classes.title}>Biology : Plant</Typography>
+        <Typography variant="title" className={props.classes.title}>
+          Biology : Plant
+        </Typography>
         <Nav />
       </Toolbar>
     </AppBar>
