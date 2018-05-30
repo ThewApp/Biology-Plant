@@ -8,6 +8,7 @@ import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg"
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg"
+import leafModifiedTendril from "../../images/leafModifiedTendril.jpg"
 
 const styles = theme => ({
   root: {
@@ -17,7 +18,8 @@ const styles = theme => ({
 
 const partData = {
   stem: "ลำต้น",
-  root: "ราก"
+  root: "ราก",
+  leaf: "ใบ"
 };
 
 const imageData = {
@@ -31,6 +33,12 @@ const imageData = {
     external: embryoImg,
     internal: embryoImg,
     modified: rootModifiedPhotosynthesis,
+    compare: embryoImg
+  },
+  leaf: {
+    external: embryoImg,
+    internal: embryoImg,
+    modified: leafModifiedTendril,
     compare: embryoImg
   }
 };
