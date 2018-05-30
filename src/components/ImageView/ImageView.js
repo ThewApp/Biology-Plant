@@ -13,7 +13,7 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       margin: "0 auto",
       marginTop: theme.spacing.unit * 2,
-      width: "50vw",
+      width: "50vw"
     }
   },
   display1: {
@@ -45,9 +45,11 @@ function ImageView(props) {
   if (props.width === "xs") {
     return (
       <Paper className={props.classes.root}>
-        <Typography variant="display1" className={props.classes.display1}>
-          {props.title}
-        </Typography>
+        {props.title && (
+          <Typography variant="display1" className={props.classes.display1}>
+            {props.title}
+          </Typography>
+        )}
         <LoadingImage
           className={props.classes.image}
           src={imgData.src}
@@ -64,9 +66,11 @@ function ImageView(props) {
   }
   return (
     <div className={props.classes.root}>
-      <Typography variant="display1" className={props.classes.display1}>
-        {props.title}
-      </Typography>
+      {props.title && (
+        <Typography variant="display1" className={props.classes.display1}>
+          {props.title}
+        </Typography>
+      )}
       <div className={props.classes.wrapper}>
         <LoadingImage
           className={props.classes.image}
