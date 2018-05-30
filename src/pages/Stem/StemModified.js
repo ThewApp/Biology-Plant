@@ -1,7 +1,7 @@
 import React from "react";
 import Markdown from "../../components/Markdown";
 
-import stemModifiedMarkdown from "./stemModified.md";
+import stemModifiedMarkdown from "./stemModifiedMarkdown";
 import stemModifiedCreeping from "../../images/stemModifiedCreeping.jpg";
 import stemModifiedTwining from "../../images/stemModifiedTwining.png";
 import stemModifiedTendril from "../../images/stemModifiedTendril.png";

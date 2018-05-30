@@ -78,13 +78,9 @@ class MarkdownContent extends Component {
   }
 
   componentDidMount() {
-    fetch(this.props.source.markdown)
-      .then(response => response.text())
-      .then(text => {
-        const finalMarkdown = extractImage(text, this.props.source.images);
-        this.setState({ markdown: finalMarkdown });
-        window.scrollTo(0, 0);
-      });
+    const finalMarkdown = extractImage(this.props.source.markdown, this.props.source.images);
+    this.setState({ markdown: finalMarkdown });
+    window.scrollTo(0, 0);
   }
 
   render() {
