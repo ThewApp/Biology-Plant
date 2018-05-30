@@ -1,12 +1,18 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import ImageView from "../../components/ImageView";
 
-const styles = theme => ({
+import stemCompareImg from "../../images/embryo.jpg";
 
-});
-
-function StemCompare(props) {
-    return <div />;
+const stemCompareData = {
+    image: {
+        src: stemCompareImg,
+        alt: "External stem view",
+    },
+    label: []
 }
 
-export default withStyles(styles)(StemCompare);
+function StemCompare(props) {
+    return <ImageView data={stemCompareData} />;
+}
+
+export default StemCompare;
