@@ -6,9 +6,9 @@ import SectionSelectorCard from "./SectionSelectorCard";
 import embryoImg from "../../images/embryo.jpg";
 import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
-import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg"
-import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg"
-import leafModifiedTendril from "../../images/leafModifiedTendril.jpg"
+import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
+import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg";
+import leafModifiedTendril from "../../images/leafModifiedTendril.jpg";
 
 const styles = theme => ({
   root: {
@@ -16,68 +16,85 @@ const styles = theme => ({
   }
 });
 
-const partData = {
-  stem: "ลำต้น",
-  root: "ราก",
-  leaf: "ใบ"
-};
-
-const imageData = {
-  stem: {
-    external: stemExternalImg,
-    internal: stemInternalImg,
-    modified: stemModifiedCladophyll,
-    compare: embryoImg
-  },
-  root: {
-    external: embryoImg,
-    internal: embryoImg,
-    modified: rootModifiedPhotosynthesis,
-    compare: embryoImg
-  },
-  leaf: {
-    external: embryoImg,
-    internal: embryoImg,
-    modified: leafModifiedTendril,
-    compare: embryoImg
-  }
+const sectionData = {
+  stem: [
+    {
+      title: "โครงสร้างภายนอกของลำต้น",
+      path: "/external",
+      image: stemExternalImg
+    },
+    {
+      title: "โครงสร้างภายในของลำต้น",
+      path: "/internal",
+      image: stemInternalImg
+    },
+    {
+      title: "ลำต้นที่เปลี่ยนไปทำหน้าที่พิเศษ",
+      path: "/modified",
+      image: stemModifiedCladophyll
+    },
+    {
+      title: "เปรียบเทียบระหว่างลำต้นพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
+      path: "/compare",
+      image: embryoImg
+    }
+  ],
+  root: [
+    {
+      title: "โครงสร้างภายนอกของราก",
+      path: "/external",
+      image: embryoImg
+    },
+    {
+      title: "โครงสร้างภายในของราก",
+      path: "/internal",
+      image: embryoImg
+    },
+    {
+      title: "รากที่เปลี่ยนไปทำหน้าที่พิเศษ",
+      path: "/modified",
+      image: rootModifiedPhotosynthesis
+    },
+    {
+      title: "เปรียบเทียบระหว่างรากพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
+      path: "/compare",
+      image: embryoImg
+    }
+  ],
+  leaf: [
+    {
+      title: "โครงสร้างภายนอกของใบ",
+      path: "/external",
+      image: embryoImg
+    },
+    {
+      title: "โครงสร้างภายในของใบ",
+      path: "/internal",
+      image: embryoImg
+    },
+    {
+      title: "ใบที่เปลี่ยนไปทำหน้าที่พิเศษ",
+      path: "/modified",
+      image: leafModifiedTendril
+    }
+  ]
 };
 
 function SectionSelector(props) {
   const part = props.match.path.slice(1);
-  const partText = partData[part];
-  const image = imageData[part];
+  const cards = sectionData[part];
   return (
     <div className={props.classes.root}>
       <Grid container spacing={16}>
-        <Grid item xs={12} sm={6} lg={3}>
-          <SectionSelectorCard
-            to={props.match.path + "/external"}
-            title={`โครงสร้างภายนอกของ${partText}`}
-            image={image.external}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <SectionSelectorCard
-            to={props.match.path + "/internal"}
-            title={`โครงสร้างภายในของ${partText}`}
-            image={image.internal}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <SectionSelectorCard
-            to={props.match.path + "/modified"}
-            title={`${partText}ที่เปลี่ยนไปทำหน้าที่พิเศษ`}
-            image={image.modified}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <SectionSelectorCard
-            to={props.match.path + "/compare"}
-            title={`เปรียบเทียบระหว่าง${partText}พืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว`}
-            image={image.compare}
-          />
-        </Grid>
+        {cards.map(obj => (
+          <Grid key={obj.path} item xs={12} sm={6} lg={3}>
+            <SectionSelectorCard
+              to={props.match.path + obj.path}
+              title={obj.title}
+              image={obj.image}
+            />
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
