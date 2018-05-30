@@ -9,16 +9,20 @@ import ImageLabel from "./ImageLabel";
 
 const styles = theme => ({
   root: {
-    position: "relative",
     margin: theme.spacing.unit,
     [theme.breakpoints.up("sm")]: {
       margin: "0 auto",
       marginTop: theme.spacing.unit * 2,
       width: "50vw",
-      minHeight: "25vw" // height while image is loading
     }
   },
+  display1: {
+    padding: theme.spacing.unit
+  },
   image: {},
+  wrapper: {
+    position: "relative"
+  },
   list: {
     listStyle: "none",
     margin: 0,
@@ -41,6 +45,9 @@ function ImageView(props) {
   if (props.width === "xs") {
     return (
       <Paper className={props.classes.root}>
+        <Typography variant="display1" className={props.classes.display1}>
+          {props.title}
+        </Typography>
         <LoadingImage
           className={props.classes.image}
           src={imgData.src}
@@ -57,14 +64,19 @@ function ImageView(props) {
   }
   return (
     <div className={props.classes.root}>
-      <LoadingImage
-        className={props.classes.image}
-        src={imgData.src}
-        alt={imgData.alt}
-      />
-      <ul className={props.classes.list}>
-        {labelData.map(obj => <ImageLabel key={obj.text} {...obj} />)}
-      </ul>
+      <Typography variant="display1" className={props.classes.display1}>
+        {props.title}
+      </Typography>
+      <div className={props.classes.wrapper}>
+        <LoadingImage
+          className={props.classes.image}
+          src={imgData.src}
+          alt={imgData.alt}
+        />
+        <ul className={props.classes.list}>
+          {labelData.map(obj => <ImageLabel key={obj.text} {...obj} />)}
+        </ul>
+      </div>
     </div>
   );
 }

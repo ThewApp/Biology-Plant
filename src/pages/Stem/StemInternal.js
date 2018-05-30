@@ -88,7 +88,7 @@ const stemExternalData = {
 };
 
 function StemInternal(props) {
-  return <ImageView data={stemExternalData} />;
+  return <ImageView data={stemExternalData} title="โครงสร้างภายในของลำต้น" />;
 }
 
 export default StemInternal;

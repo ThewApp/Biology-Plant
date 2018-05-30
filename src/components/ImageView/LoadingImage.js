@@ -5,7 +5,8 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = theme => ({
   root: {
-    position: "relative"
+    position: "relative",
+    minHeight: "25vw" // height while image is loading
   },
   progress: {
     position: "absolute",
