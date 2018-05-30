@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PUBLIC_URL=https://ThewApp.github.io/Biology-Plant
+export PUBLIC_URL=.
 
 npm run build
 
