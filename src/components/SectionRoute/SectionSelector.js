@@ -41,8 +41,8 @@ const sectionData = {
   ],
   root: [
     {
-      title: "โครงสร้างภายนอกของราก",
-      path: "/external",
+      title: "ชนิดของราก",
+      path: "/type",
       image: embryoImg
     },
     {

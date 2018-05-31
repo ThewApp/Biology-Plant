@@ -5,26 +5,14 @@ import SectionSelector from "./SectionSelector";
 function SectionRoute(props) {
   return (
     <Switch>
-      <Route
-        exact
-        path={props.path + "/external"}
-        component={props.external}
-      />
-      <Route
-        exact
-        path={props.path + "/internal"}
-        component={props.internal}
-      />
-      <Route
-        exact
-        path={props.path + "/modified"}
-        component={props.modified}
-      />
-      <Route
-        exact
-        path={props.path + "/compare"}
-        component={props.compare}
-      />
+      {props.routeConfig.map(obj => (
+        <Route
+          key={obj.path}
+          exact
+          path={props.path + obj.path}
+          component={obj.component}
+        />
+      ))}
       <Route component={SectionSelector} />
     </Switch>
   );
