@@ -1,8 +1,7 @@
 import React from "react";
 import SectionRoute from "../../components/SectionRoute";
 import RootType from "./RootType";
-import RootCrossVertical from "./RootCrossVertical";
-import RootCrossHorizontal from "./RootCrossHorizontal";
+import RootInternal from "./RootInternal";
 import RootModified from "./RootModified";
 import RootCompare from "./RootCompare";
 
@@ -12,12 +11,8 @@ const routeConfig = [
     component: RootType
   },
   {
-    path: "/cross-vertical",
-    component: RootCrossVertical
-  },
-  {
-    path: "/cross-horizontal",
-    component: RootCrossHorizontal
+    path: "/internal",
+    component: RootInternal
   },
   {
     path: "/modified",
