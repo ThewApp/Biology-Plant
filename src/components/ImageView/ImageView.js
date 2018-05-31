@@ -42,6 +42,11 @@ const styles = theme => ({
 function ImageView(props) {
   const imgData = props.data.image;
   const labelData = props.data.label;
+  const lists = labelData.length > 0 && (
+    <ul className={props.classes.list}>
+      {labelData.map(obj => <ImageLabel key={obj.text} {...obj} />)}
+    </ul>
+  );
   if (props.width === "xs") {
     return (
       <Paper className={props.classes.root}>
@@ -55,12 +60,12 @@ function ImageView(props) {
           src={imgData.src}
           alt={imgData.alt}
         />
-        <Typography variant="title" className={props.classes.title}>
-          ลักษณะ
-        </Typography>
-        <ul className={props.classes.list}>
-          {labelData.map(obj => <ImageLabel key={obj.text} {...obj} />)}
-        </ul>
+        {labelData.length > 0 && (
+          <Typography variant="title" className={props.classes.title}>
+            ลักษณะ
+          </Typography>
+        )}
+        {lists}
       </Paper>
     );
   }
@@ -77,9 +82,7 @@ function ImageView(props) {
           src={imgData.src}
           alt={imgData.alt}
         />
-        <ul className={props.classes.list}>
-          {labelData.map(obj => <ImageLabel key={obj.text} {...obj} />)}
-        </ul>
+        {lists}
       </div>
     </div>
   );
