@@ -1,7 +1,7 @@
 import React from "react";
 import SectionRoute from "../../components/SectionRoute";
 import RootType from "./RootType";
-import RootInternal from "./RootInternal";
+import RootView from "./RootView";
 import RootModified from "./RootModified";
 import RootCompare from "./RootCompare";
 
@@ -11,8 +11,8 @@ const routeConfig = [
     component: RootType
   },
   {
-    path: "/internal",
-    component: RootInternal
+    path: "/view",
+    component: RootView
   },
   {
     path: "/modified",
