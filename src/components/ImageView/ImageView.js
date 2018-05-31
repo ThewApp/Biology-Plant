@@ -4,6 +4,7 @@ import withWidth from "@material-ui/core/withWidth";
 import compose from "recompose/compose";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import ScreenRotationIcon from "@material-ui/icons/ScreenRotation";
 import LoadingImage from "./LoadingImage";
 import ImageLabel from "./ImageLabel";
 
@@ -32,10 +33,13 @@ const styles = theme => ({
       paddingTop: 0
     }
   },
-  title: {
-    [theme.breakpoints.only("xs")]: {
-      margin: theme.spacing.unit
-    }
+  hint: {
+    margin: theme.spacing.unit
+  },
+  hintIcon: {
+    position: "relative",
+    top: "0.25em",
+    marginRight: "0.2em"
   }
 });
 
@@ -61,8 +65,9 @@ function ImageView(props) {
           alt={imgData.alt}
         />
         {labelData.length > 0 && (
-          <Typography variant="title" className={props.classes.title}>
-            ลักษณะ
+          <Typography className={props.classes.hint}>
+            <ScreenRotationIcon className={props.classes.hintIcon} />
+            พลิกหน้าจอแนวนอนเพื่อดูตำแหน่งต่างๆ
           </Typography>
         )}
         {lists}
