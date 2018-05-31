@@ -46,8 +46,13 @@ const sectionData = {
       image: embryoImg
     },
     {
-      title: "โครงสร้างภายในของราก",
-      path: "/internal",
+      title: "โครงสร้างรากตัดตามยาว",
+      path: "/cross-vertical",
+      image: embryoImg
+    },
+    {
+      title: "โครงสร้างรากตัดตามขวาง",
+      path: "/cross-horizontal",
       image: embryoImg
     },
     {
