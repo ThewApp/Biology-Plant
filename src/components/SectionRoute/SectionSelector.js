@@ -7,6 +7,7 @@ import embryoImg from "../../images/embryo.jpg";
 import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
+import rootInternal from "../../images/rootInternal.png";
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg";
 import leafModifiedTendril from "../../images/leafModifiedTendril.jpg";
 
@@ -48,7 +49,7 @@ const sectionData = {
     {
       title: "โครงสร้างภายในของราก",
       path: "/internal",
-      image: embryoImg
+      image: rootInternal
     },
     {
       title: "รากที่เปลี่ยนไปทำหน้าที่พิเศษ",
