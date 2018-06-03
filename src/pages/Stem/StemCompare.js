@@ -1,7 +1,7 @@
 import React from "react";
 import ImageView from "../../components/ImageView";
 
-import stemCompareImg from "../../images/embryo.jpg";
+import stemCompareImg from "../../images/overviewEmbryo.jpg";
 
 const stemCompareData = {
   image: {

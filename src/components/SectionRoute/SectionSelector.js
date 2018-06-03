@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import SectionSelectorCard from "./SectionSelectorCard";
 
-import embryoImg from "../../images/embryo.jpg";
+import overviewEmbryo from "../../images/overviewEmbryo.jpg";
 import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
@@ -37,14 +37,14 @@ const sectionData = {
     {
       title: "เปรียบเทียบระหว่างลำต้นพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
       path: "/compare",
-      image: embryoImg
+      image: overviewEmbryo
     }
   ],
   root: [
     {
       title: "ชนิดของราก",
       path: "/type",
-      image: embryoImg
+      image: overviewEmbryo
     },
     {
       title: "โครงสร้างราก",
@@ -59,19 +59,19 @@ const sectionData = {
     {
       title: "เปรียบเทียบระหว่างรากพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
       path: "/compare",
-      image: embryoImg
+      image: overviewEmbryo
     }
   ],
   leaf: [
     {
       title: "โครงสร้างภายนอกของใบ",
       path: "/external",
-      image: embryoImg
+      image: overviewEmbryo
     },
     {
       title: "โครงสร้างภายในของใบ",
       path: "/internal",
-      image: embryoImg
+      image: overviewEmbryo
     },
     {
       title: "ใบที่เปลี่ยนไปทำหน้าที่พิเศษ",

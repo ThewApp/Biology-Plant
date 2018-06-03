@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import ListItem from "./ListItem";
 
-import embryoImg from "../../images/embryo.jpg";
-import promeristemImg from "../../images/promeristem.jpg";
-import primaryMeristemImg from "../../images/primary meristem.jpg";
-import permanentTissueImg from "../../images/permanent tissue.jpg";
+import embryoImg from "../../images/overviewEmbryo.jpg";
+import promeristemImg from "../../images/overviewPromeristem.jpg";
+import primaryMeristemImg from "../../images/overviewPrimaryMeristem.jpg";
+import permanentTissueImg from "../../images/overviewPermanentTissue.jpg";
 
 const styles = theme => ({
   root: {

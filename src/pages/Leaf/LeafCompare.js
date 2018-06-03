@@ -1,7 +1,7 @@
 import React from "react";
 import ImageView from "../../components/ImageView";
 
-import leafCompareImg from "../../images/embryo.jpg";
+import leafCompareImg from "../../images/overviewEmbryo.jpg";
 
 const leafCompareData = {
     image: {

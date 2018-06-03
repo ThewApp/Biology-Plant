@@ -1,7 +1,7 @@
 import React from "react";
 import ImageView from "../../components/ImageView";
 
-import leafExternalImg from "../../images/embryo.jpg";
+import leafExternalImg from "../../images/overviewEmbryo.jpg";
 
 const leafExternalData = {
   image: {

@@ -1,7 +1,7 @@
 import React from "react";
 import ImageView from "../../components/ImageView";
 
-import rootCompareImg from "../../images/embryo.jpg";
+import rootCompareImg from "../../images/overviewEmbryo.jpg";
 
 const rootCompareData = {
     image: {
