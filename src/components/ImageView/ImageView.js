@@ -48,7 +48,7 @@ function ImageView(props) {
   const labelData = props.data.label;
   const lists = labelData.length > 0 && (
     <ul className={props.classes.list}>
-      {labelData.map(obj => <ImageLabel key={obj.text + obj.anchorPosition.top} {...obj} />)}
+      {labelData.map(obj => <ImageLabel key={obj.text + obj.anchorPosition.top} {...obj} imgSize={imgData.size} />)}
     </ul>
   );
   if (props.width === "xs") {

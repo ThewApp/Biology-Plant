@@ -7,6 +7,10 @@ const stemExternalData = {
   image: {
     src: stemExternalImg,
     alt: "External stem view",
+    size: {
+      width: 428,
+      height: 533
+    }
   },
   label: [
     {

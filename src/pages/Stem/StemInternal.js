@@ -6,7 +6,11 @@ import stemInternalImg from "../../images/stemInternal.jpg";
 const stemExternalData = {
   image: {
     src: stemInternalImg,
-    alt: "Internal stem view"
+    alt: "Internal stem view",
+    size: {
+      width: 1348,
+      height: 1080
+    }
   },
   label: [
     {

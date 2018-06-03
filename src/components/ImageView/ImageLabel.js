@@ -45,10 +45,10 @@ const styles = theme => ({
       zIndex: 2
     },
     [theme.breakpoints.up("md")]: {
-      padding: theme.spacing.unit,
+      padding: theme.spacing.unit
     },
     [theme.breakpoints.up("lg")]: {
-      padding: theme.spacing.unit * 1.5,
+      padding: theme.spacing.unit * 1.5
     }
   },
   link: {
@@ -62,7 +62,7 @@ const styles = theme => ({
   },
   description: {
     [theme.breakpoints.up("md")]: {
-    marginTop: theme.spacing.unit / 2
+      marginTop: theme.spacing.unit / 2
     }
   }
 });
@@ -73,16 +73,19 @@ function calculateAnchorStyle(anchorPosition) {
   return { top: `calc(${top}% - 10px)`, left: `calc(${left}% - 10px)` };
 }
 
-function calculateVectorStyle(anchorPosition, paperPosition) {
+function calculateVectorStyle(anchorPosition, paperPosition, imgSize) {
   const top = anchorPosition.top;
   const left = anchorPosition.left;
-  const width = Math.sqrt(
-    (anchorPosition.top - paperPosition.top) ** 2 +
-      (anchorPosition.left - paperPosition.left) ** 2
-  );
   const y = paperPosition.top - anchorPosition.top;
   const x = paperPosition.left - anchorPosition.left;
-  let degree = Math.atan2(y, x) * 180 / Math.PI;
+  const width = Math.sqrt(y ** 2 + x ** 2);
+  let degree =
+    Math.atan2(
+      y * (imgSize ? imgSize.height : 1),
+      x * (imgSize ? imgSize.width : 1)
+    ) *
+    180 /
+    Math.PI;
   const transform = `rotate(${degree}deg)`;
   return {
     top: `${top}%`,
@@ -128,7 +131,8 @@ function ImageLabel(props) {
   const anchorStyle = calculateAnchorStyle(props.anchorPosition);
   const vectorStyle = calculateVectorStyle(
     props.anchorPosition,
-    props.paperPosition
+    props.paperPosition,
+    props.imgSize
   );
   const paperStyle = calculatePaperStyle(props.paperPosition);
   let text = (
