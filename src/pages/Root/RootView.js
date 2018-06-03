@@ -3,7 +3,7 @@ import ImageView from "../../components/ImageView";
 
 import rootViewImg from "../../images/rootView.png";
 
-const rootExternalData = {
+const rootViewData = {
   image: {
     src: rootViewImg,
     alt: "Root view"
@@ -12,7 +12,7 @@ const rootExternalData = {
 };
 
 function RootView(props) {
-  return <ImageView data={rootExternalData} title="โครงสร้างราก" />;
+  return <ImageView data={rootViewData} title="โครงสร้างราก" />;
 }
 
 export default RootView;
