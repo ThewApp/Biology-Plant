@@ -1,21 +1,21 @@
 import React from "react";
 import SectionRoute from "../../components/SectionRoute";
-import LeafExternal from "./LeafExternal";
-import LeafInternal from "./LeafInternal";
+import LeafView from "./LeafView";
 import LeafModified from "./LeafModified";
+import LeafCompare from "./LeafCompare";
 
 const routeConfig = [
   {
-    path: "/external",
-    component: LeafExternal
-  },
-  {
-    path: "/internal",
-    component: LeafInternal
+    path: "/view",
+    component: LeafView
   },
   {
     path: "/modified",
     component: LeafModified
+  },
+  {
+    path: "/compare",
+    component: LeafCompare
   }
 ];
 

@@ -9,7 +9,9 @@ import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
 import rootView from "../../images/rootView.png";
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg";
+import leafView from "../../images/leafView.jpg";
 import leafModifiedTendril from "../../images/leafModifiedTendril.jpg";
+import leafCompare from "../../images/leafCompare.jpg";
 
 const styles = theme => ({
   root: {
@@ -64,19 +66,19 @@ const sectionData = {
   ],
   leaf: [
     {
-      title: "โครงสร้างภายนอกของใบ",
-      path: "/external",
-      image: overviewEmbryo
-    },
-    {
-      title: "โครงสร้างภายในของใบ",
-      path: "/internal",
-      image: overviewEmbryo
+      title: "โครงสร้างใบ",
+      path: "/view",
+      image: leafView
     },
     {
       title: "ใบที่เปลี่ยนไปทำหน้าที่พิเศษ",
       path: "/modified",
       image: leafModifiedTendril
+    },
+    {
+      title: "เปรียบเทียบโครงสร้างใบพืช C3 กับ C4",
+      path: "/compare",
+      image: leafCompare
     }
   ]
 };
