@@ -48,7 +48,7 @@ const sectionData = {
     },
     {
       title: "โครงสร้างราก",
-      path: "/View",
+      path: "/view",
       image: rootView
     },
     {
