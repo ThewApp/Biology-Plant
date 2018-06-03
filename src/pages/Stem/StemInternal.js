@@ -82,7 +82,7 @@ const stemExternalData = {
         left: -20
       },
       text: "Vascular bundle",
-      link: "/tissue/vascula-bundle"
+      link: "/tissue/vascular-bundle"
     }
   ]
 };
