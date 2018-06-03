@@ -42,6 +42,13 @@ const styles = theme => ({
       maxWidth: "75%",
       margin: "0 auto",
       display: "block"
+    },
+    "& a": {
+      color: theme.palette.secondary.main,
+      textDecoration: "none",
+      "&:hover": {
+        textDecoration: "underline"
+      }
     }
   }
 });
@@ -78,7 +85,10 @@ class MarkdownContent extends Component {
   }
 
   componentDidMount() {
-    const finalMarkdown = extractImage(this.props.source.markdown, this.props.source.images);
+    const finalMarkdown = extractImage(
+      this.props.source.markdown,
+      this.props.source.images
+    );
     this.setState({ markdown: finalMarkdown });
     window.scrollTo(0, 0);
   }
