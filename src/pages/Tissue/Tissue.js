@@ -5,6 +5,12 @@ import Markdown from "../../components/Markdown";
 import Epidermis from "./Epidermis";
 import Cortex from "./Cortex";
 import Stele from "./Stele";
+import Parenchyma from "./Parenchyma";
+import Collenchyma from "./Collenchyma";
+import Sclerenchyma from "./Sclerenchyma";
+import VascularBundle from "./VascularBundle";
+import Phloem from "./Phloem";
+import Xylem from "./Xylem";
 
 const tissueRouteConfig = [
   {
@@ -18,6 +24,30 @@ const tissueRouteConfig = [
   {
     path: "/stele",
     data: Stele
+  },
+  {
+    path: "/parenchyma",
+    data: Parenchyma
+  },
+  {
+    path: "/collenchyma",
+    data: Collenchyma
+  },
+  {
+    path: "/sclerenchyma",
+    data: Sclerenchyma
+  },
+  {
+    path: "/vascular-bundle",
+    data: VascularBundle
+  },
+  {
+    path: "/phloem",
+    data: Phloem
+  },
+  {
+    path: "/xylem",
+    data: Xylem
   }
 ];
 
