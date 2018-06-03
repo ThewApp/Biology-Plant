@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import ListItem from "./ListItem";
 
-import embryoImg from "../../images/overviewEmbryo.jpg";
-import promeristemImg from "../../images/overviewPromeristem.jpg";
-import primaryMeristemImg from "../../images/overviewPrimaryMeristem.jpg";
-import permanentTissueImg from "../../images/overviewPermanentTissue.jpg";
+import overviewEmbryo from "../../images/overviewEmbryo.jpg";
+import overviewPromeristem from "../../images/overviewPromeristem.jpg";
+import overviewPrimaryMeristem from "../../images/overviewPrimaryMeristem.jpg";
+import overviewPermanentTissue from "../../images/overviewPermanentTissue.jpg";
 
 const styles = theme => ({
   root: {
@@ -26,34 +26,34 @@ const data = [
   {
     intro: "พืชทุกต้น เริ่มจาก...",
     title: "Embryo",
-    image: embryoImg
+    image: overviewEmbryo
   },
   {
     intro: "Embryo พัฒนาต่อเป็น...",
     title: "Promeristem",
-    image: promeristemImg
+    image: overviewPromeristem
   },
   {
     intro: "Promeristem พัฒนาต่อเป็น...",
     title: "Primary meristem",
-    image: primaryMeristemImg,
+    image: overviewPrimaryMeristem,
     chips: [
       {
         label: "Protoderm",
         color: "#009933",
-        image: embryoImg,
+        image: overviewEmbryo,
         alt: "protoderm พัฒนาต่อเป็น epidermis"
       },
       {
         label: "Ground meristem",
         color: "#3366cc",
-        image: primaryMeristemImg,
+        image: overviewPrimaryMeristem,
         alt: "ground meristem พัฒนาต่อเป็น cortex"
       },
       {
         label: "Procambium",
         color: "#cc9900",
-        image: primaryMeristemImg,
+        image: overviewPrimaryMeristem,
         alt: "procambium พัฒนาต่อเป็น stele"
       }
     ]
@@ -61,7 +61,7 @@ const data = [
   {
     intro: "Primary meristem พัฒนาต่อเป็น...",
     title: "Permanent tissue",
-    image: permanentTissueImg,
+    image: overviewPermanentTissue,
     links: [
       {
         label: "Epidermis",
@@ -83,7 +83,7 @@ const data = [
   {
     intro: "พืชบางชนิด อาจมี...",
     title: "Secondary meristem",
-    image: embryoImg,
+    image: overviewEmbryo,
     links: [
       {
         label: "Cork cambium",
