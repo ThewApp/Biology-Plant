@@ -38,6 +38,9 @@ const styles = theme => ({
     "& p, & ul, & ol": {
       lineHeight: 1.6
     },
+    "& strong": {
+      fontWeight: theme.typography.fontWeightMedium
+    },
     "& img": {
       maxWidth: "75%",
       margin: "0 auto",
