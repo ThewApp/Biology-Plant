@@ -49,6 +49,10 @@ const tissueRouteConfig = [
   {
     path: "/xylem",
     data: Xylem
+  },
+  {
+    path: "/vascular-cambium",
+    data: VascularCambium
   }
 ];
 
