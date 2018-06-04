@@ -11,6 +11,7 @@ import Sclerenchyma from "./Sclerenchyma";
 import VascularBundle from "./VascularBundle";
 import Phloem from "./Phloem";
 import Xylem from "./Xylem";
+import VascularCambium from "./VascularCambium";
 
 const tissueRouteConfig = [
   {
