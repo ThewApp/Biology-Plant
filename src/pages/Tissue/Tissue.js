@@ -11,6 +11,7 @@ import Sclerenchyma from "./Sclerenchyma";
 import VascularBundle from "./VascularBundle";
 import Phloem from "./Phloem";
 import Xylem from "./Xylem";
+import Pericycle from "./Pericycle";
 import CorkCambium from "./CorkCambium";
 import VascularCambium from "./VascularCambium";
 
@@ -50,6 +51,10 @@ const tissueRouteConfig = [
   {
     path: "/xylem",
     data: Xylem
+  },
+  {
+    path: "/pericycle",
+    data: Pericycle
   },
   {
     path: "/cork-cambium",
