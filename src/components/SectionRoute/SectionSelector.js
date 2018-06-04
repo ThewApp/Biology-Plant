@@ -7,6 +7,7 @@ import overviewEmbryo from "../../images/overviewEmbryo.jpg";
 import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
+import rootTypePrimary from "../../images/rootTypePrimary.png";
 import rootView from "../../images/rootView.png";
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg";
 import leafView from "../../images/leafView.jpg";
@@ -46,7 +47,7 @@ const sectionData = {
     {
       title: "ชนิดของราก",
       path: "/type",
-      image: overviewEmbryo
+      image: rootTypePrimary
     },
     {
       title: "โครงสร้างราก",
