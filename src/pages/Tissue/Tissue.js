@@ -15,7 +15,8 @@ import Pericycle from "./Pericycle";
 import CorkCambium from "./CorkCambium";
 import VascularCambium from "./VascularCambium";
 import Cork from "./Cork";
-import Mesophyll from "./Mesophyll"
+import Mesophyll from "./Mesophyll";
+import BundleSheath from "./BundleSheath";
 
 const tissueRouteConfig = [
   {
@@ -73,6 +74,10 @@ const tissueRouteConfig = [
   {
     path: "/mesophyll",
     data: Mesophyll
+  },
+  {
+    path: "/bundle-sheath",
+    data: BundleSheath
   }
 ];
 
