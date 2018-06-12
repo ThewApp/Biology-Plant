@@ -3,13 +3,14 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import SectionSelectorCard from "./SectionSelectorCard";
 
-import overviewEmbryo from "../../images/overviewEmbryo.jpg";
 import stemExternalImg from "../../images/stemExternal.png";
 import stemInternalImg from "../../images/stemInternal.jpg";
 import stemModifiedCladophyll from "../../images/stemModifiedCladophyll.jpg";
+import stemCompare from "../../images/stemCompare.jpg";
 import rootTypePrimary from "../../images/rootTypePrimary.png";
 import rootView from "../../images/rootView.png";
 import rootModifiedPhotosynthesis from "../../images/rootModifiedPhotosynthesis.jpg";
+import rootCompare from "../../images/rootCompare.jpg";
 import leafView from "../../images/leafView.jpg";
 import leafModifiedTendril from "../../images/leafModifiedTendril.jpg";
 import leafCompare from "../../images/leafCompare.jpg";
@@ -40,7 +41,7 @@ const sectionData = {
     {
       title: "เปรียบเทียบระหว่างลำต้นพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
       path: "/compare",
-      image: overviewEmbryo
+      image: stemCompare
     }
   ],
   root: [
@@ -62,7 +63,7 @@ const sectionData = {
     {
       title: "เปรียบเทียบระหว่างรากพืชใบเลี้ยงคู่และใบเลี้ยงเดี่ยว",
       path: "/compare",
-      image: overviewEmbryo
+      image: rootCompare
     }
   ],
   leaf: [
