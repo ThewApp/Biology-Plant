@@ -5,6 +5,9 @@ import ListItem from "./ListItem";
 import overviewEmbryo from "../../images/overviewEmbryo.jpg";
 import overviewPromeristem from "../../images/overviewPromeristem.jpg";
 import overviewPrimaryMeristem from "../../images/overviewPrimaryMeristem.jpg";
+import overviewPrimaryMeristemProtoderm from "../../images/overviewPrimaryMeristemProtoderm.jpg";
+import overviewPrimaryMeristemGroundMeristem from "../../images/overviewPrimaryMeristemGroundMeristem.jpg";
+import overviewPrimaryMeristemProcambium from "../../images/overviewPrimaryMeristemProcambium.jpg";
 import overviewPermanentTissue from "../../images/overviewPermanentTissue.jpg";
 
 const styles = theme => ({
@@ -41,19 +44,19 @@ const data = [
       {
         label: "Protoderm",
         color: "#009933",
-        image: overviewEmbryo,
+        image: overviewPrimaryMeristemProtoderm,
         alt: "protoderm พัฒนาต่อเป็น epidermis"
       },
       {
         label: "Ground meristem",
         color: "#3366cc",
-        image: overviewPrimaryMeristem,
+        image: overviewPrimaryMeristemGroundMeristem,
         alt: "ground meristem พัฒนาต่อเป็น cortex"
       },
       {
         label: "Procambium",
         color: "#cc9900",
-        image: overviewPrimaryMeristem,
+        image: overviewPrimaryMeristemProcambium,
         alt: "procambium พัฒนาต่อเป็น stele"
       }
     ]
