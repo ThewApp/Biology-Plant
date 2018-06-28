@@ -9,6 +9,7 @@ import overviewPrimaryMeristemProtoderm from "../../images/overviewPrimaryMerist
 import overviewPrimaryMeristemGroundMeristem from "../../images/overviewPrimaryMeristemGroundMeristem.jpg";
 import overviewPrimaryMeristemProcambium from "../../images/overviewPrimaryMeristemProcambium.jpg";
 import overviewPermanentTissue from "../../images/overviewPermanentTissue.jpg";
+import overviewSecondaryMeristem from "../../images/overviewSecondaryMeristem.jpg";
 
 const styles = theme => ({
   root: {
@@ -86,7 +87,7 @@ const data = [
   {
     intro: "พืชบางชนิด อาจมี...",
     title: "Secondary meristem",
-    image: overviewEmbryo,
+    image: overviewSecondaryMeristem,
     links: [
       {
         label: "Cork cambium",
